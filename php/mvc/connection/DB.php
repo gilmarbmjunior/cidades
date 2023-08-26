@@ -9,7 +9,7 @@ class DB
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             return $conn;
         } catch (Exception $e) {
-            echo new Exception('DB could not be connected: ' . $e->getMessage());
+            echo new Exception('Erro ao conectar ao banco de dados: ' . $e->getMessage());
         }
     }
 }
