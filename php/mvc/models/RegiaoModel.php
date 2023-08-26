@@ -1,15 +1,12 @@
 <?php
 
-require_once '../connection/DB.php';
-require_once '../objects/Regiao.php';
-
 class RegiaoModel extends Regiao
 {
     //listar todos os registros
 
-    public static function list()
+    public static function list($where = '')
     {
-        $sql = 'SELECT * FROM regiao';
+        $sql = 'SELECT * FROM regiao ' . $where;
 
         $dao = DB::conn();
         $stmt = $dao->prepare($sql);

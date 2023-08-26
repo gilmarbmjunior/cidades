@@ -1,13 +1,11 @@
 <?php
 
-require_once '../models/RegiaoModel.php';
-
 class RegiaoController extends RegiaoModel
 {
 
-    public static function list()
+    public static function list($where = '')
     {
-        return parent::list();
+        return parent::list($where);
     }
 
     public static function find($id): array

@@ -1,15 +1,12 @@
 <?php
 
-require_once '../connection/DB.php';
-require_once '../objects/Estado.php';
-
 class EstadoModel extends Estado
 {
     //listar todos os registros
 
-    public static function list()
+    public static function list($where = '')
     {
-        $sql = 'SELECT * FROM estado';
+        $sql = 'SELECT * FROM estado ' . $where;
 
         $dao = DB::conn();
         $stmt = $dao->prepare($sql);

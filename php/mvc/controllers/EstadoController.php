@@ -1,13 +1,11 @@
 <?php
 
-require_once '../models/EstadoModel.php';
-
 class EstadoController extends EstadoModel
 {
 
-    public static function list()
+    public static function list($where = '')
     {
-        return parent::list();
+        return parent::list($where);
     }
 
     public static function find($id): array

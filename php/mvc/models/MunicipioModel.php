@@ -1,15 +1,12 @@
 <?php
 
-require_once '../connection/DB.php';
-require_once '../objects/Municipio.php';
-
 class MunicipioModel extends Municipio
 {
     //listar todos os registros
 
-    public static function list()
+    public static function list($where = '')
     {
-        $sql = 'SELECT * FROM municipio';
+        $sql = 'SELECT * FROM municipio ' . $where;
 
         $dao = DB::conn();
         $stmt = $dao->prepare($sql);

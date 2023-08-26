@@ -1,13 +1,11 @@
 <?php
 
-require_once '../models/MunicipioModel.php';
-
 class MunicipioController extends MunicipioModel
 {
 
-    public static function list()
+    public static function list($where = '')
     {
-        return parent::list();
+        return parent::list($where);
     }
 
     public static function find($id): array
